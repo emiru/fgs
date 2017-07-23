@@ -1,0 +1,338 @@
+[
+  {
+    "area": "0-1",
+    "limits": {
+      "leader": 40,
+      "size": 4
+    },
+    "time": 50,
+    "labo": 0,
+    "ammo": 145,
+    "food": 145,
+    "part": 0
+  },
+  {
+    "area": "0-2",
+    "limits": {
+      "leader": 45,
+      "size": 5
+    },
+    "time": 180,
+    "labo": 550,
+    "ammo": 0,
+    "food": 0,
+    "part": 350
+  },
+  {
+    "area": "0-3",
+    "limits": {
+      "leader": 45,
+      "size": 5
+    },
+    "time": 720,
+    "labo": 900,
+    "ammo": 900,
+    "food": 900,
+    "part": 250
+  },
+  {
+    "area": "0-4",
+    "limits": {
+      "leader": 50,
+      "size": 5
+    },
+    "time": 1440,
+    "labo": 0,
+    "ammo": 120,
+    "food": 800,
+    "part": 700
+  },
+  {
+    "area": "1-1",
+    "limits": {
+      "leader": 1,
+      "size": 2
+    },
+    "time": 15,
+    "labo": 10,
+    "ammo": 30,
+    "food": 15,
+    "part": 0
+  },
+  {
+    "area": "1-2",
+    "limits": {
+      "leader": 3,
+      "size": 2
+    },
+    "time": 30,
+    "labo": 0,
+    "ammo": 40,
+    "food": 60,
+    "part": 0
+  },
+  {
+    "area": "1-3",
+    "limits": {
+      "leader": 5,
+      "size": 3
+    },
+    "time": 60,
+    "labo": 30,
+    "ammo": 0,
+    "food": 30,
+    "part": 10
+  },
+  {
+    "area": "1-4",
+    "limits": {
+      "leader": 6,
+      "size": 5
+    },
+    "time": 120,
+    "labo": 160,
+    "ammo": 160,
+    "food": 0,
+    "part": 0
+  },
+  {
+    "area": "2-1",
+    "limits": {
+      "leader": 5,
+      "size": 3
+    },
+    "time": 40,
+    "labo": 100,
+    "ammo": 0,
+    "food": 0,
+    "part": 30
+  },
+  {
+    "area": "2-2",
+    "limits": {
+      "leader": 8,
+      "size": 4
+    },
+    "time": 90,
+    "labo": 60,
+    "ammo": 200,
+    "food": 80,
+    "part": 0
+  },
+  {
+    "area": "2-3",
+    "limits": {
+      "leader": 10,
+      "size": 5
+    },
+    "time": 240,
+    "labo": 10,
+    "ammo": 10,
+    "food": 10,
+    "part": 230
+  },
+  {
+    "area": "2-4",
+    "limits": {
+      "leader": 15,
+      "size": 5
+    },
+    "time": 360,
+    "labo": 0,
+    "ammo": 250,
+    "food": 600,
+    "part": 60
+  },
+  {
+    "area": "3-1",
+    "limits": {
+      "leader": 12,
+      "size": 4
+    },
+    "time": 20,
+    "labo": 50,
+    "ammo": 0,
+    "food": 75,
+    "part": 0
+  },
+  {
+    "area": "3-2",
+    "limits": {
+      "leader": 20,
+      "size": 5
+    },
+    "time": 45,
+    "labo": 0,
+    "ammo": 120,
+    "food": 70,
+    "part": 30
+  },
+  {
+    "area": "3-3",
+    "limits": {
+      "leader": 15,
+      "size": 4
+    },
+    "time": 90,
+    "labo": 0,
+    "ammo": 300,
+    "food": 0,
+    "part": 0
+  },
+  {
+    "area": "3-4",
+    "limits": {
+      "leader": 25,
+      "size": 5
+    },
+    "time": 300,
+    "labo": 0,
+    "ammo": 0,
+    "food": 300,
+    "part": 300
+  },
+  {
+    "area": "4-1",
+    "limits": {
+      "leader": 30,
+      "size": 4
+    },
+    "time": 60,
+    "labo": 0,
+    "ammo": 185,
+    "food": 185,
+    "part": 0
+  },
+  {
+    "area": "4-2",
+    "limits": {
+      "leader": 35,
+      "size": 5
+    },
+    "time": 120,
+    "labo": 0,
+    "ammo": 0,
+    "food": 0,
+    "part": 210
+  },
+  {
+    "area": "4-3",
+    "limits": {
+      "leader": 40,
+      "size": 5
+    },
+    "time": 360,
+    "labo": 800,
+    "ammo": 550,
+    "food": 0,
+    "part": 0
+  },
+  {
+    "area": "4-4",
+    "limits": {
+      "leader": 40,
+      "size": 5
+    },
+    "time": 480,
+    "labo": 400,
+    "ammo": 400,
+    "food": 400,
+    "part": 150
+  },
+  {
+    "area": "5-1",
+    "limits": {
+      "leader": 30,
+      "size": 4
+    },
+    "time": 30,
+    "labo": 0,
+    "ammo": 0,
+    "food": 100,
+    "part": 45
+  },
+  {
+    "area": "5-2",
+    "limits": {
+      "leader": 35,
+      "size": 5
+    },
+    "time": 150,
+    "labo": 0,
+    "ammo": 600,
+    "food": 300,
+    "part": 0
+  },
+  {
+    "area": "5-3",
+    "limits": {
+      "leader": 40,
+      "size": 5
+    },
+    "time": 240,
+    "labo": 800,
+    "ammo": 400,
+    "food": 400,
+    "part": 0
+  },
+  {
+    "area": "5-4",
+    "limits": {
+      "leader": 40,
+      "size": 5
+    },
+    "time": 420,
+    "labo": 100,
+    "ammo": 0,
+    "food": 0,
+    "part": 700
+  },
+  {
+    "area": "6-1",
+    "limits": {
+      "leader": 40,
+      "size": 5
+    },
+    "time": 120,
+    "labo": 300,
+    "ammo": 300,
+    "food": 0,
+    "part": 100
+  },
+  {
+    "area": "6-2",
+    "limits": {
+      "leader": 45,
+      "size": 5
+    },
+    "time": 180,
+    "labo": 0,
+    "ammo": 200,
+    "food": 550,
+    "part": 100
+  },
+  {
+    "area": "6-3",
+    "limits": {
+      "leader": 45,
+      "size": 5
+    },
+    "time": 300,
+    "labo": 0,
+    "ammo": 0,
+    "food": 200,
+    "part": 500
+  },
+  {
+    "area": "6-4",
+    "limits": {
+      "leader": 50,
+      "size": 5
+    },
+    "time": 720,
+    "labo": 800,
+    "ammo": 800,
+    "food": 800,
+    "part": 0
+  }
+]
