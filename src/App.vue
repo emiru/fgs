@@ -10,13 +10,18 @@ export default {
 </script>
 
 <style lang="less">
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body {
   margin: 0 0 0 0;
 }
-#app {
-  @import url('https://fonts.googleapis.com/css?family=Acme');
 
-  font-family: 'Acme';
+input, button {
+  font-family: 'Nanum Gothic';
+  font-size: 15px;
+}
+
+#app {
+  font-family: 'Nanum Gothic';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 0 0 0;
