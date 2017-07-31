@@ -10,7 +10,7 @@ export default {
 </script>
 
 <style lang="less">
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body {
   margin: 0 0 0 0;
 }
