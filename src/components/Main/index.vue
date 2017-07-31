@@ -1,6 +1,5 @@
 <template lang="pug">
   .main
-    .title FOR SAVING GIRLS
     cond(@plan-as-usual="planAsUsual" @plan-for-sleep="planForSleep")
     results(:plans="plans")
 </template>

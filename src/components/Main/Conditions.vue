@@ -1,39 +1,23 @@
 <template lang="pug">
   .conditions
-    .item
-      .title 인력(비율)
-      div 
+    .inner-container
+      .empty
+      .ratio
         input(type="number" v-model="ratio.labo")
-    .item
-      .title 탄약(비율)
-      div
         input(type="number" v-model="ratio.ammo")
-    .item
-      .title 식량(비율)
-      div
         input(type="number" v-model="ratio.food")
-    .item 
-      .title 부품(비율)
-      div
         input(type="number" v-model="ratio.part")
-    .item
-      .title 잘 거니?
-      div
-        label
-          input(type="radio" :value="true" v-model="forSleep")
-          | 응
-        label
-          input(type="radio" :value="false" v-model="forSleep")
-          | 아니
-    .item(v-show="forSleep")
-      .title 수면 시간(분)
-      div
-        input(type="number" v-model="limitTime")
-    .item(v-show="!forSleep")
-      .title 확인 주기(분)
-      div
-        input(type="number" v-model="period")
-    button(@click="plan") Planning
+      .empty
+      .time
+        .toggle
+          img(src="~@/assets/yes.png" v-show="forSleep" @click="forSleep=false")
+          img(src="~@/assets/no.png" v-show="!forSleep" @click="forSleep=true")
+        .yes(v-show="forSleep")
+          input(type="number" v-model="limitTime")
+        .no(v-show="!forSleep")
+          input(type="number" v-model="period")
+    .bottom
+      button(@click="plan")
 </template>
 
 <script>
@@ -65,44 +49,112 @@ export default {
 
 <style lang="less" scoped>
 .conditions {
+  width: 765px;
+  height: 472px;
+  padding-top: 201px;
+  background-image: url("~@/assets/main.png");
 
-  .item {
-    display: flex;
-    height: 30px;
+  .inner-container {
+  background-color: rgba(0, 0, 0, 0);
+    height: 305px;
 
-    .title {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      width: 110px;
+    .empty:nth-child(1) {
+      display: inline-block;
+      width: 217px;
+      height: 100%;
+      vertical-align: top;
     }
 
-    div:nth-child(2) {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      padding: 5px 20px 5px 20px;
+    .ratio {
+      display: inline-block;
+      width: 109px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      vertical-align: top;
 
       input[type="number"] {
+        display: block;
+        margin-top: 39px;
         width: 100%;
-        height: 100%;
-        font-size: 18px;
-        border: 1px solid gray;
+        height: 43px;
+        border: 0px;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: right;
+        font-size: 40px;
+        font-weight: bold;
+
+        &:nth-child(1) {
+          margin-top: 2px;
+        }
       }
-      
-      label {
-        flex: 1;
+    }
+
+    .empty {
+      display: inline-block;
+      width: 68px;
+      height: 100%;
+      vertical-align: top;
+    }
+
+    .time {
+    background-color: rgba(0, 0, 0, 0);
+      width: 314px;
+      height: 100%;
+      display: inline-block;
+      vertical-align: top;
+
+      .toggle {
+        display: block;
+        padding-left: 100px;
+        padding-top: 80px;
+      }
+
+      .yes, .no {
+        margin-top: 2px;
+        display: block;
+        height: 171px;
+        padding: 0 0 0 0;
+
+        input[type="number"] {
+        background-color: rgba(0, 0, 0, 0);
+          border: 0px;
+
+          width: 145px;
+          height: 87px;
+          text-align: right;
+          font-size: 50px;
+          font-weight: bold;
+        }
+      }
+
+      .yes {
+        background-image: url("~@/assets/yes_.png");
+
+        input[type="number"] {
+          margin-left: 10px;
+          margin-top: 70px;
+        }
+      }
+
+      .no {
+        background-image: url("~@/assets/no_.png");
+
+        input[type="number"] {
+          margin-left: 157px;
+          margin-top: 70px;
+        }
       }
     }
   }
 
   button {
-    width: 100%;
-    height: 35px;
-    margin-top: 10px;
-    background-color: white;
-    border: 1px solid gray;
-    font-size: 20px;
+    margin-top: 60px;
+    display: block;
+    width: 763px;
+    height: 107px;
+    background-image: url("~@/assets/planning.png");
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
   }
 }
 </style>
