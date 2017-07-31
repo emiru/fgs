@@ -49,80 +49,86 @@ export default {
 
 <style lang="less" scoped>
 .conditions {
-  width: 765px;
-  height: 472px;
-  padding-top: 201px;
+  width: 320px;
+  height: 281px;
   background-image: url("~@/assets/main.png");
+  background-size: 320px;
+  background-repeat: no-repeat;
 
   .inner-container {
-  background-color: rgba(0, 0, 0, 0);
-    height: 305px;
+    display: inline-block;
+    margin-top: 83px;
+    height: 129px;
 
     .empty:nth-child(1) {
       display: inline-block;
-      width: 217px;
-      height: 100%;
-      vertical-align: top;
+      width: 90px;
     }
 
     .ratio {
       display: inline-block;
-      width: 109px;
+      width: 48px;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0);
       vertical-align: top;
 
       input[type="number"] {
         display: block;
-        margin-top: 39px;
+        margin-top: 13.5px;
+        padding: 0 0 0 0;
         width: 100%;
-        height: 43px;
+        height: 22px;
         border: 0px;
-        background-color: rgba(0, 0, 0, 0);
         text-align: right;
-        font-size: 40px;
+        font-size: 17px;
         font-weight: bold;
+        background-color: rgba(0, 0, 0, 0);
 
         &:nth-child(1) {
-          margin-top: 2px;
+          margin-top: 0px;
         }
       }
     }
 
     .empty {
       display: inline-block;
-      width: 68px;
+      width: 27px;
       height: 100%;
       vertical-align: top;
     }
 
     .time {
-    background-color: rgba(0, 0, 0, 0);
-      width: 314px;
+      width: 130px;
       height: 100%;
       display: inline-block;
       vertical-align: top;
 
       .toggle {
         display: block;
-        padding-left: 100px;
-        padding-top: 80px;
+        padding-left: 42px;
+        padding-top: 32px;
+        height: 25px;
+
+        img {
+          width: 68px;
+
+        }
       }
 
       .yes, .no {
-        margin-top: 2px;
         display: block;
-        height: 171px;
+        height: 70px;
         padding: 0 0 0 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
 
         input[type="number"] {
-        background-color: rgba(0, 0, 0, 0);
+          background-color: rgba(0, 0, 0, 0);
           border: 0px;
 
-          width: 145px;
-          height: 87px;
+          width: 61px;
+          height: 39px;
           text-align: right;
-          font-size: 50px;
+          font-size: 20px;
           font-weight: bold;
         }
       }
@@ -131,8 +137,8 @@ export default {
         background-image: url("~@/assets/yes_.png");
 
         input[type="number"] {
-          margin-left: 10px;
-          margin-top: 70px;
+          margin-left: 3px;
+          margin-top: 26px;
         }
       }
 
@@ -140,19 +146,21 @@ export default {
         background-image: url("~@/assets/no_.png");
 
         input[type="number"] {
-          margin-left: 157px;
-          margin-top: 70px;
+          margin-left: 64px;
+          margin-top: 26px;
         }
       }
     }
   }
 
   button {
-    margin-top: 60px;
+    margin-top: 24px;
     display: block;
-    width: 763px;
-    height: 107px;
+    width: 320px;
+    height: 45px;
     background-image: url("~@/assets/planning.png");
+    background-size: 319px;
+    background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0);
     border: 0px;
   }

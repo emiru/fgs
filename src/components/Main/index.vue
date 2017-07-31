@@ -1,7 +1,8 @@
 <template lang="pug">
   .main
     cond(@plan-as-usual="planAsUsual" @plan-for-sleep="planForSleep")
-    results(:plans="plans")
+    transition(name="slide")
+      results(:plans="plans" v-show="plans.length > 0")
 </template>
 
 <script>
@@ -104,16 +105,16 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-.main {
-  width: 320px;
-
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    height: 50px;
-  }
+<style lang="less">
+.slide-enter-active {
+  transition: all .3s ease;
+}
+.slide-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-enter, .slide-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-10px);
+  opacity: 0;
 }
 </style>
