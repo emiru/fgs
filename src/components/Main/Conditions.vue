@@ -25,18 +25,26 @@ export default {
   data() {
     return {
       ratio: {
-        labo: 4,
-        ammo: 8,
-        food: 1,
-        part: 2,
+        labo: this.$cookie.get('fsg.ratio.labo') - 0 || 4,
+        ammo: this.$cookie.get('fsg.ratio.ammo') - 0 || 8,
+        food: this.$cookie.get('fsg.ratio.food') - 0 || 1,
+        part: this.$cookie.get('fsg.ratio.part') - 0 || 2,
       },
-      forSleep: false,
-      period: 60,
-      limitTime: 480,
+      forSleep: this.$cookie.get('fsg.forSleep') === 'true',
+      period: this.$cookie.get('fsg.period') - 0 || 60,
+      limitTime: this.$cookie.get('fsg.limitTime') - 0 || 480,
     };
   },
   methods: {
     plan() {
+      this.$cookie.set('fsg.ratio.labo', this.ratio.labo);
+      this.$cookie.set('fsg.ratio.ammo', this.ratio.ammo);
+      this.$cookie.set('fsg.ratio.food', this.ratio.food);
+      this.$cookie.set('fsg.ratio.part', this.ratio.part);
+      this.$cookie.set('fsg.forSleep', this.forSleep);
+      this.$cookie.set('fsg.period', this.period);
+      this.$cookie.set('fsg.limitTime', this.limitTime);
+
       if (this.forSleep) {
         this.$emit('plan-for-sleep', this.ratio, this.limitTime);
       } else {
