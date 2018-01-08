@@ -6,9 +6,12 @@
 </template>
 
 <script>
-import logsticSupports from '@/assets/logistic-support.json';
+import axios from 'axios';
 import Conditions from './Conditions';
 import Results from './Results';
+
+const retrievelogsticSupports =
+    () => axios.get('https://raw.githubusercontent.com/emiru/fsg/master/src/assets/logistic-support.json');
 
 const makeSupportsCombination = (supports) => {
   const tempPlans = [];
@@ -59,49 +62,55 @@ export default {
   },
   methods: {
     planForSleep(ratio, limitTime) {
-      const availableSupports = logsticSupports.filter((
-        item => (item.time <= limitTime)
-      )).map((item) => {
-        const expectationValue =
-          (item.labo * ratio.labo)
-          + (item.ammo * ratio.ammo)
-          + (item.food * ratio.food)
-          + (item.part * ratio.part);
-        return {
-          ...item,
-          value: expectationValue,
-        };
-      }).sort((o1, o2) => (o2.sum.value - o1.sum.value)).slice(0, 5);
+      retrievelogsticSupports().then((res) => {
+        const logsticSupports = res.data;
+        const availableSupports = logsticSupports.filter((
+          item => (item.time <= limitTime)
+        )).map((item) => {
+          const expectationValue =
+            (item.labo * ratio.labo)
+            + (item.ammo * ratio.ammo)
+            + (item.food * ratio.food)
+            + (item.part * ratio.part);
+          return {
+            ...item,
+            value: expectationValue,
+          };
+        }).sort((o1, o2) => (o2.sum.value - o1.sum.value)).slice(0, 5);
 
-      this.plans = makeSupportsCombination(availableSupports)
+        this.plans = makeSupportsCombination(availableSupports)
         .sort((o1, o2) => (o2.value - o1.value))
         .slice(0, 3);
+      });
     },
     planAsUsual(ratio, period) {
-      const supportsWithValue = logsticSupports.map((item) => {
-        const time = Math.ceil(item.time / period) * period;
-        return {
-          area: item.area,
-          labo: (item.labo / time) * 60,
-          ammo: (item.ammo / time) * 60,
-          food: (item.food / time) * 60,
-          part: (item.part / time) * 60,
-        };
-      }).map((item) => {
-        const expectationValue =
-          (item.labo * ratio.labo)
-          + (item.ammo * ratio.ammo)
-          + (item.food * ratio.food)
-          + (item.part * ratio.part);
-        return {
-          ...item,
-          value: expectationValue,
-        };
-      }).sort((o1, o2) => (o2.value - o1.value)).slice(0, 5);
+      retrievelogsticSupports().then((res) => {
+        const logsticSupports = res.data;
+        const supportsWithValue = logsticSupports.map((item) => {
+          const time = Math.ceil(item.time / period) * period;
+          return {
+            area: item.area,
+            labo: (item.labo / time) * 60,
+            ammo: (item.ammo / time) * 60,
+            food: (item.food / time) * 60,
+            part: (item.part / time) * 60,
+          };
+        }).map((item) => {
+          const expectationValue =
+            (item.labo * ratio.labo)
+            + (item.ammo * ratio.ammo)
+            + (item.food * ratio.food)
+            + (item.part * ratio.part);
+          return {
+            ...item,
+            value: expectationValue,
+          };
+        }).sort((o1, o2) => (o2.value - o1.value)).slice(0, 5);
 
-      this.plans = makeSupportsCombination(supportsWithValue)
-        .sort((o1, o2) => (o2.sum.value - o1.sum.value))
-        .slice(0, 3);
+        this.plans = makeSupportsCombination(supportsWithValue)
+          .sort((o1, o2) => (o2.sum.value - o1.sum.value))
+          .slice(0, 3);
+      });
     },
   },
 };
