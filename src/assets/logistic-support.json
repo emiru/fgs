@@ -430,5 +430,53 @@
     "ammo": 400,
     "food": 400,
     "part": 100
+  },
+  {
+    "area": "9-1",
+    "limits": {
+      "leader": 55,
+      "size": 5
+    },
+    "time": 30,
+    "labo": 0,
+    "ammo": 0,
+    "food": 100,
+    "part": 50
+  },
+  {
+    "area": "9-2",
+    "limits": {
+      "leader": 60,
+      "size": 5
+    },
+    "time": 90,
+    "labo": 180,
+    "ammo": 0,
+    "food": 180,
+    "part": 100
+  },
+  {
+    "area": "9-3",
+    "limits": {
+      "leader": 65,
+      "size": 5
+    },
+    "time": 270,
+    "labo": 750,
+    "ammo": 750,
+    "food": 0,
+    "part": 0
+  },
+  {
+    "area": "9-4",
+    "limits": {
+      "leader": 70,
+      "size": 5
+    },
+    "time": 420,
+    "labo": 500,
+    "ammo": 900,
+    "food": 900,
+    "part": 0
   }
 ]

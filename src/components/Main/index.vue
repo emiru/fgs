@@ -76,7 +76,7 @@ export default {
             ...item,
             value: expectationValue,
           };
-        }).sort((o1, o2) => (o2.sum.value - o1.sum.value)).slice(0, 5);
+        }).sort((o1, o2) => (o2.value - o1.value)).slice(0, 5);
 
         this.plans = makeSupportsCombination(availableSupports)
         .sort((o1, o2) => (o2.value - o1.value))
