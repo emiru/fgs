@@ -25,10 +25,10 @@ export default {
   data() {
     return {
       ratio: {
-        labo: this.$cookie.get('fsg.ratio.labo') - 0 || 4,
-        ammo: this.$cookie.get('fsg.ratio.ammo') - 0 || 8,
+        labo: this.$cookie.get('fsg.ratio.labo') - 0 || 1,
+        ammo: this.$cookie.get('fsg.ratio.ammo') - 0 || 1,
         food: this.$cookie.get('fsg.ratio.food') - 0 || 1,
-        part: this.$cookie.get('fsg.ratio.part') - 0 || 2,
+        part: this.$cookie.get('fsg.ratio.part') - 0 || 3,
       },
       forSleep: this.$cookie.get('fsg.forSleep') === 'true',
       period: this.$cookie.get('fsg.period') - 0 || 60,
